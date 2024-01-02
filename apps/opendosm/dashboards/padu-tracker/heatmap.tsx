@@ -32,7 +32,7 @@ const PaduTrackerHeatmap: FunctionComponent<HeatmapProps> = ({ heatmap }) => {
         y: t(`keys.${item.x}`),
         z: item.z,
       })),
-    []
+    [options]
   );
 
   return (

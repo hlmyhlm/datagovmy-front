@@ -26,7 +26,7 @@ interface TimeseriesProp {
   >;
 }
 
-const LifeExpectancyTimeseries: FunctionComponent<TimeseriesProp> = ({
+const PaduTrackerTimeseries: FunctionComponent<TimeseriesProp> = ({
   timeseries,
   timeseries_callout,
 }) => {
@@ -73,7 +73,7 @@ const LifeExpectancyTimeseries: FunctionComponent<TimeseriesProp> = ({
           key={title}
           title={title}
           className="h-[350px] w-full"
-          interval="year"
+          interval="day"
           enableAnimation={!play}
           beginZero={false}
           suggestedMinY={50}
@@ -120,7 +120,7 @@ const LifeExpectancyTimeseries: FunctionComponent<TimeseriesProp> = ({
             </div>
             <Slider
               type="range"
-              period="year"
+              period="auto"
               value={data.minmax}
               onChange={e => setData("minmax", e)}
               data={timeseries.data.x}
@@ -132,4 +132,4 @@ const LifeExpectancyTimeseries: FunctionComponent<TimeseriesProp> = ({
   );
 };
 
-export default LifeExpectancyTimeseries;
+export default PaduTrackerTimeseries;
